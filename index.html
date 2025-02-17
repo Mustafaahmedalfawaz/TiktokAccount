@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طقطقة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #loading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #loader {
+            width: 50%;
+            height: 10px;
+            margin-top: 20px;
+            background: #ccc;
+            border-radius: 5px;
+        }
+        #progress {
+            height: 100%;
+            width: 0;
+            background: #f79c42;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">جاري تهكيرك وسحب ملفاتك</div>
+    <div id="loader">
+        <div id="progress"></div>
+    </div>
+
+    <script>
+        let progress = 0;
+        let interval = setInterval(() => {
+            progress += 1;
+            document.getElementById('progress').style.width = progress + '%';
+            if (progress === 100) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    window.location.href = 'page2.html'; // الانتقال للصفحة التالية
+                }, 1000);
+            }
+        }, 30);
+    </script>
+</body>
+</html>

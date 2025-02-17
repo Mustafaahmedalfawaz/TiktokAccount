@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السؤال الأول</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>مين أكثر شخص خواف؟</div>
+    <button class="button" onclick="showMessage('مصطفى')">مصطفى</button>
+    <button class="button" onclick="showMessage('اصايل')">اصايل</button>
+
+    <script>
+        function showMessage(answer) {
+            if (answer === 'مصطفى') {
+                alert('حدث خطأ: مصطفى ؟؟!!! مين الي قمط العافية قبل شوي ؟؟!!!');
+            } else if (answer === 'اصايل') {
+                alert('برافو جوابك صحيح!');
+                window.location.href = 'question2.html'; // الانتقال للسؤال التالي بعد الإجابة الصحيحة
+            }
+        }
+    </script>
+</body>
+</html>

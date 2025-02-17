@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السؤال الثاني</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>كم عمر مصطفى؟</div>
+    <button class="button" onclick="showMessage(7)">7</button>
+    <button class="button" onclick="showMessage(17)">17</button>
+    <button class="button" onclick="showMessage(99)">99</button>
+    <button class="button" onclick="showMessage('اصايل عمره')">اصايل عمره</button>
+
+    <script>
+        function showMessage(answer) {
+            if (answer === 7) {
+                alert('اهجدي تراك معرضة للتهكير في أي لحظة!');
+            } else if (answer === 17) {
+                alert('🤔🤔🤔 لسه ما اقتنعت أريد جواب مقنع أكثر!');
+            } else if (answer === 'اصايل عمره') {
+                alert('شفتي انك نرجسية!!! ما أقول انك نرجسية من عبث!');
+            } else if (answer === 99) {
+                window.location.href = 'finalPage.html'; // الانتقال للصفحة النهائية
+            }
+        }
+    </script>
+</body>
+</html>
